@@ -1,9 +1,12 @@
 import React from 'react'
+import PageHeader from '../../components/PageHeader/PageHeader'
+
+import '../Page.scss'
 
 export default function PageHome() {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className='page'>
+      <PageHeader heading={''}></PageHeader>
     </div>
   )
 }

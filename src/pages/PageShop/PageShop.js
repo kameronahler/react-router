@@ -1,9 +1,12 @@
 import React from 'react'
+import PageHeader from '../../components/PageHeader/PageHeader'
+
+import '../Page.scss'
 
 export default function PageShop() {
   return (
-    <div>
-      <h1>Shop</h1>
+    <div className='page'>
+      <PageHeader heading={''}></PageHeader>
     </div>
   )
 }
