@@ -9,17 +9,17 @@ export default function AppHeader() {
       <nav className='app-header__nav'>
         <ul className='app-header__ul'>
           <li className='app-header__li app-header__li--home'>
-            <Link class='app-header__link' to='/'>
+            <Link className='app-header__link' to='/'>
               Home
             </Link>
           </li>
           <li className='app-header__li'>
-            <Link class='app-header__link' to='/about'>
+            <Link className='app-header__link' to='/about'>
               About
             </Link>
           </li>
           <li className='app-header__li'>
-            <Link class='app-header__link' to='/shop'>
+            <Link className='app-header__link' to='/shop'>
               Shop
             </Link>
           </li>
