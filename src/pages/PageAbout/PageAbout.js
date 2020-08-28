@@ -5,7 +5,7 @@ import '../Page.scss'
 export default function PageAbout() {
   return (
     <div className='page'>
-      <PageHeader heading={''}></PageHeader>
+      <PageHeader heading={'About'}></PageHeader>
     </div>
   )
 }
