@@ -16,7 +16,7 @@ export default function App() {
           <Switch>
             <Route path='/' exact component={PageHome} />
             <Route path='/about' exact component={PageAbout} />
-            <Route path='/shop' component={PageShop} />
+            <Route path='/new-shop' component={PageShop} />
             <Route path='*' component={Page404} />
           </Switch>
         </main>

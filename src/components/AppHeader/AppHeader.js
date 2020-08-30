@@ -19,7 +19,7 @@ export default function AppHeader() {
             </Link>
           </li>
           <li className='app-header__li'>
-            <Link className='app-header__link' to='/shop'>
+            <Link className='app-header__link' to='/new-shop'>
               Shop
             </Link>
           </li>
