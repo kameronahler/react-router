@@ -5,7 +5,6 @@ import AppHeader from '../AppHeader/AppHeader'
 import PageHome from '../../pages/PageHome/PageHome'
 import PageAbout from '../../pages/PageAbout/PageAbout'
 import PageShop from '../../pages/PageShop/PageShop'
-import PageShopDetail from '../../pages/PageShopDetail/PageShopDetail'
 import Page404 from '../../pages/Page404/Page404'
 
 export default function App() {
@@ -17,11 +16,8 @@ export default function App() {
           <Switch>
             <Route path='/' exact component={PageHome} />
             <Route path='/about' exact component={PageAbout} />
-            <Switch>
-              <Route path='/shop' exact component={PageShop} />
-              <Route path='/shop/:id' exact component={PageShopDetail} />
-            </Switch>
-            <Route path='' component={Page404} />
+            <Route path='/shop' component={PageShop} />
+            <Route path='*' component={Page404} />
           </Switch>
         </main>
       </Router>

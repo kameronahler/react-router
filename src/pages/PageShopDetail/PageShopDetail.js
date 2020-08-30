@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PageHeader from '../../components/PageHeader/PageHeader'
 import '../Page.scss'
+
 export default function PageShopDetail({ match }) {
   useEffect(() => {
     getData()
@@ -17,7 +18,7 @@ export default function PageShopDetail({ match }) {
     const parsedData = await data.json()
     setItem(parsedData.data)
   }
-  console.log(item)
+
   return (
     <div className='page'>
       <PageHeader heading={`${item.first_name} ${item.last_name}`} />
