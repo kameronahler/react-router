@@ -7,17 +7,17 @@ import '../Page.scss'
 export default function PageShop() {
   const { path, url } = useRouteMatch()
 
-  useEffect(() => {
-    getData()
-  }, [])
-
-  const [currentItems, setCurrentItems] = useState([])
-
   const getData = async () => {
     const data = await fetch('https://reqres.in/api/users?page=2')
     const parsedData = await data.json()
     setCurrentItems(parsedData.data)
   }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+  const [currentItems, setCurrentItems] = useState([])
 
   return (
     <div className='page'>

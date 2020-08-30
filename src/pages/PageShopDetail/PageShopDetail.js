@@ -3,8 +3,14 @@ import { useParams, useHistory } from 'react-router-dom'
 import PageHeader from '../../components/PageHeader/PageHeader'
 import '../Page.scss'
 
-export default function PageShopDetail({ match }) {
+export default function PageShopDetail() {
   const { id } = useParams()
+
+  const getData = async () => {
+    const data = await fetch(`https://reqres.in/api/users/${id}`)
+    const parsedData = await data.json()
+    setItem(parsedData.data)
+  }
 
   useEffect(() => {
     getData()
@@ -16,18 +22,21 @@ export default function PageShopDetail({ match }) {
     last_name: '',
   })
 
-  const getData = async () => {
-    const data = await fetch(`https://reqres.in/api/users/${id}`)
-    const parsedData = await data.json()
-    setItem(parsedData.data)
-  }
-
   const history = useHistory()
 
   return (
     <div className='page'>
       <PageHeader heading={`${item.first_name} ${item.last_name}`} />
-      <img alt='' width='50' height='50' src={item.avatar}></img>
+      <img
+        alt=''
+        width='50'
+        height='50'
+        src={item.avatar}
+        onClick={() => {
+          // console.log(history)
+          history.replace(`${history.location.pathname}?test`)
+        }}
+      ></img>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam iste
         optio ex sequi quia dignissimos beatae adipisci ut illo dolorum libero
