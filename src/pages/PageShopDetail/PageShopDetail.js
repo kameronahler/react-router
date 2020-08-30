@@ -6,7 +6,11 @@ export default function PageShopDetail({ match }) {
     getData()
   }, [])
 
-  const [item, setItem] = useState([])
+  const [item, setItem] = useState({
+    avatar: {},
+    first_name: '',
+    last_name: '',
+  })
 
   const getData = async () => {
     const data = await fetch(`https://reqres.in/api/users/${match.params.id}`)
