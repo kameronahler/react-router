@@ -17,9 +17,10 @@ export default function App() {
           <Switch>
             <Route path='/' exact component={PageHome} />
             <Route path='/about' exact component={PageAbout} />
-            <Route path='/shop' exact component={PageShop} />
-            <Route path='/shop/:id' component={PageShopDetail} />
-
+            <Switch>
+              <Route path='/shop' exact component={PageShop} />
+              <Route path='/shop/:id' exact component={PageShopDetail} />
+            </Switch>
             <Route path='' component={Page404} />
           </Switch>
         </main>
@@ -30,3 +31,6 @@ export default function App() {
 
 //to do:
 // history
+// catch on error
+// redirect
+// add search query
