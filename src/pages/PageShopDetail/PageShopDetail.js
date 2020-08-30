@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import PageHeader from '../../components/PageHeader/PageHeader'
 import '../Page.scss'
 
 export default function PageShopDetail({ match }) {
+  const { id } = useParams()
+
   useEffect(() => {
     getData()
   }, [])
@@ -14,7 +17,7 @@ export default function PageShopDetail({ match }) {
   })
 
   const getData = async () => {
-    const data = await fetch(`https://reqres.in/api/users/${match.params.id}`)
+    const data = await fetch(`https://reqres.in/api/users/${id}`)
     const parsedData = await data.json()
     setItem(parsedData.data)
   }
