@@ -36,10 +36,11 @@ export default function PageShopDetail({ match }) {
       </p>
       <button
         onClick={() => {
-          history.push('/about')
+          history.push('/about?test')
         }}
       >
-        Fire an event that changes path
+        Fire an event that changes path but will include a query string so that
+        it will look different than /about
       </button>
     </div>
   )
