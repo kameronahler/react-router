@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import PageHeader from '../../components/PageHeader/PageHeader'
 import '../Page.scss'
 
@@ -22,6 +22,8 @@ export default function PageShopDetail({ match }) {
     setItem(parsedData.data)
   }
 
+  const history = useHistory()
+
   return (
     <div className='page'>
       <PageHeader heading={`${item.first_name} ${item.last_name}`} />
@@ -32,6 +34,13 @@ export default function PageShopDetail({ match }) {
         quam aspernatur laudantium, eius, architecto repellat deserunt? Quam,
         quis.
       </p>
+      <button
+        onClick={() => {
+          history.push('/about')
+        }}
+      >
+        Fire an event that changes path
+      </button>
     </div>
   )
 }
